@@ -1,0 +1,75 @@
+/*
+Theme Name: Ceres
+Theme URL: http://www.pcazorla.com
+Description: Theme for pcazorla.com
+Author: Pablo Cazorla
+Version: 1.x
+Tags: pablo, cazorla, illustration, webdesign
+*/
+/* NORMALIZE */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:transparent}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}*:focus {outline: 0}/*RESET*/html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul,menu{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}/* Clearfix */
+.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.clear{clear:both}
+
+/* BASICS **********************************************************************************************************/
+
+body{background-color:#134;color:#eee;min-width: 320px;}
+
+
+
+
+
+
+
+
+/* LAYOUT **********************************************************************************************************/
+#frame,#back-frame{position: fixed;top: 0;bottom: 0;left: 0;right: 0;overflow: hidden}
+#frame{z-index:10;}
+#back-frame{z-index:1;}
+
+.main{position: absolute;z-index:11;top: 0;bottom: 0;}
+
+header.main{left:0;width:80px;}
+article.main{left:80px;right: 0;overflow: hidden}
+footer.main{display: none}
+
+
+
+/* HEADER **********************************************************************************************************/
+header.main{background: #2d2d2d}
+
+
+
+
+
+
+
+/* PANEL LAYOUT */
+.panel{position: absolute;top: 0;bottom: 0;background-color: #111;overflow: hidden;
+	transition: left .5s;-webkit-transition: left .5s;-moz-transition: left .5s;
+}
+
+.panel-wrap{position: absolute;z-index:12;top: 0;bottom: 0;left:0;right:-40px;overflow-x:hidden;overflow-y:scroll  }
+.panel-content{height:6000px}
+
+.panel-move{position: absolute;z-index:13;background-color: #3AA;left:0;right: 0;height: 25px;cursor:pointer;opacity: 0}
+.panel-move.to-top{top:0;}
+.panel-move.to-bottom{bottom:0;}
+
+
+
+.panel{left:-1400px;}
+.panel,.panel-content{width: 1400px;}
+
+/* Panel styles */
+.panel.list-panel{background-color: #111;}
+.panel.post-panel{background-color: #222;}
+
+/* panel modes */
+.list-frame .panel.list-panel{left: 0}
+
+.post-frame .panel.post-panel{left: 0;border-left: 10px solid #111}
+
+
+
+
+#back-frame img{width:100% !important;height:auto !important;}
